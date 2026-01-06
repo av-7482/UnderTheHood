@@ -1,0 +1,220 @@
+/* ================= Header ================= */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 22px;
+  border-bottom: 1px solid #1d273a;
+  background: rgba(13, 17, 26, 0.95);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 60px;
+}
+
+/* ================= Logo ================= */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+}
+
+.icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.text {
+  font-size: 18px;
+  font-weight: 700;
+  display: inline-flex;
+}
+
+.under {
+  color: #00ff00;
+}
+
+.rest {
+  color: #ffffff;
+}
+
+/* ================= Navigation ================= */
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav a {
+  margin: 0 18px;
+  text-decoration: none;
+  color: #cbd5e1;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.nav a:hover {
+  color: #00ff00;
+}
+
+/* ================= Buttons ================= */
+.auth-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  padding: 8px 16px;
+  margin-left: 10px;
+  border-radius: 6px;
+  border: none;
+  background: #1d273a;
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.btn.primary {
+  background: #00ff00;
+  color: #000;
+}
+
+/* ================= Avatar + Dropdown ================= */
+.avatar-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background: #00ff00;
+  color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Dropdown hidden by default */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #111;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 100;
+}
+.avatar-dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+}
+/* SHOW DROPDOWN ON HOVER */
+.avatar-wrapper:hover .dropdown {
+  display: block;
+}
+
+/* Dropdown items */
+.dropdown button {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #d4e1f5;
+  padding: 12px 14px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.dropdown button:hover {
+  background: rgba(0, 255, 102, 0.08);
+}
+
+.dropdown .logout {
+  color: #ff6b6b;
+}
+
+/* NAV DROPDOWN */
+.nav-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-link {
+  color: #cbd5e1;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+.nav-link:hover {
+  color: #00ff00;
+}
+
+/* CATEGORY / ADMIN DROPDOWN */
+.dropdown-menu {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background: #0f1724;
+  border: 1px solid #1e2a3c;
+  border-radius: 10px;
+  min-width: 200px;
+  padding: 10px;
+  display: none;
+  flex-direction: column;
+  z-index: 999;
+}
+
+.nav-dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #0f1724;
+  border: 1px solid #1e2a3c;
+  border-radius: 10px;
+  min-width: 200px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+}
+
+.dropdown-menu a {
+  padding: 10px 12px;
+  color: #d4e1f5;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.dropdown-menu a:hover {
+  background: rgba(0, 255, 102, 0.1);
+  color: #00ff00;
+}
+
+
+/* ADMIN LABEL */
+.nav-link.admin {
+  color: #ffcc00;
+}

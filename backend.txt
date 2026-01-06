@@ -1,0 +1,13 @@
+server/
+ ├── models/
+ │   ├── User.js
+ │   ├── Computer.js
+ ├── routes/
+ │   ├── authRoutes.js
+ │   ├── computerRoutes.js
+ ├── middleware/
+ │   ├── authMiddleware.js
+ ├── controllers/
+ ├── config/
+ │   ├── db.js
+ ├── server.js

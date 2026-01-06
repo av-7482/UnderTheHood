@@ -1,0 +1,121 @@
+/* ================= Register Page ================= */
+
+.register-page {
+  min-height: calc(100vh - 140px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0e131d;
+  padding: 20px;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+/* Card */
+.register-card {
+  width: 100%;
+  max-width: 380px;
+  background: #151e2b;
+  border: 1px solid #1f2a40;
+  border-radius: 14px;
+  padding: 26px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Heading */
+.register-card h1 {
+  text-align: center;
+  font-size: 26px;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 13px;
+  color: #92a4c9;
+  margin-bottom: 22px;
+}
+
+/* Form */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 13px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.form-group input {
+  height: 40px;
+  background: #0e131d;
+  border: 1px solid #1f2a40;
+  border-radius: 8px;
+  padding: 0 12px;
+  color: #ffffff;
+  font-size: 13px;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.form-group input::placeholder {
+  color: #92a4c9;
+}
+
+.form-group input:focus {
+  border-color: #00ff00;
+}
+
+/* Button */
+.btn-primary {
+  margin-top: 10px;
+  height: 42px;
+  border: none;
+  border-radius: 8px;
+  background: #00ff00;
+  color: #0e131d;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: #00e600;
+}
+
+/* Login Link */
+.login-link {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.login-link a {
+  font-size: 13px;
+  color: #00ff00;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+.error-text {
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  color: #ff6b6b;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin-bottom: 10px;
+  text-align: center;
+}
