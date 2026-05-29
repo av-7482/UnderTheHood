@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import "../CSS/Componentdetail.css";
+import "../CSS/componentdetail.css";
 
 export default function ComponentDetails() {
     const { id } = useParams();
