@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import "../CSS/communityArticle.css";
+import "../CSS/communityarticle.css";
 
 const CommunityArticle = () => {
     const { id } = useParams();
