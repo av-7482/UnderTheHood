@@ -23,7 +23,7 @@ export default function NewCommunityPost() {
             title,
             body,
             author,
-            image: "/images/" + imagePath, // just the path
+            image:imagePath, // just the path
         };
 
         try {
