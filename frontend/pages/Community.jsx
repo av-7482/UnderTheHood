@@ -63,7 +63,7 @@ const CommunityNews = () => {
                                 <div className="news-card" key={post._id} onClick={() => window.location.href = `/community/${post._id}`} >
                                     <div className="image-wrapper">
                                         <img
-                                            src={post.image || "/placeholder.jpg"}
+                                           src={`/images/${post.image}`}
                                             alt={post.title}
                                         />
                                     </div>
