@@ -117,7 +117,7 @@ export default function ComponentDetails() {
                         {/* IMAGE */}
                         <div className="product-image">
                             <img
-                                src={`../src/assets/${component.image}`}
+                                src={`/images/${component.image}`}
                                 alt={component.name}
                                 onError={(e) => {
                                     e.target.onerror = null;
