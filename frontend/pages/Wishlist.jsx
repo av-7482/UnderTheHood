@@ -126,7 +126,7 @@ export default function Wishlist() {
                                     <div
                                         className="image"
                                         style={{
-                                            backgroundImage: `url(../src/assets/${item.image || "default.png"})`
+                                            backgroundImage: `url(/images/${item.image || "default.png"})`
                                         }}
                                     >
                                         <span
