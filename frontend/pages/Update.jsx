@@ -46,7 +46,7 @@ export default function UpdateItem() {
 
         try {
             // Try component
-            let res = await fetch(`http://localhost:5000/api/components/${id}`);
+            let res = await fetch(`https://underthehood.onrender.com/api/components/${id}`);
             if (res.ok) {
                 setData(await res.json());
                 setType("component");
@@ -54,7 +54,7 @@ export default function UpdateItem() {
             }
 
             // Try computer
-            res = await fetch(`http://localhost:5000/api/computers/${id}`);
+            res = await fetch(`https://underthehood.onrender.com/api/computers/${id}`);
             if (res.ok) {
                 setData(await res.json());
                 setType("computer");
@@ -93,7 +93,7 @@ export default function UpdateItem() {
 
         try {
             const res = await fetch(
-                `http://localhost:5000/api/${type}s/${_id}`,
+                `https://underthehood.onrender.com/api/${type}s/${_id}`,
                 {
                     method: "PUT",
                     headers: {

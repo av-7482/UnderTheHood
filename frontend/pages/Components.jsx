@@ -17,7 +17,7 @@ const ComponentShowcase = () => {
 
   /* ================= FETCH COMPONENTS ================= */
   useEffect(() => {
-    fetch("http://localhost:5000/api/components")
+    fetch("https://underthehood.onrender.com/api/components")
       .then(res => res.json())
       .then(data => setComponents(data))
       .catch(err => console.error(err));
@@ -34,7 +34,7 @@ const ComponentShowcase = () => {
 
     try {
       await fetch(
-        `http://localhost:5000/api/wishlist/components/${componentId}`,
+        `https://underthehood.onrender.com/api/wishlist/components/${componentId}`,
         {
           method: isWishlisted ? "DELETE" : "POST",
           headers: {

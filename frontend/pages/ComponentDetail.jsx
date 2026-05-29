@@ -20,7 +20,7 @@ export default function ComponentDetails() {
     const fetchComponent = async () => {
         try {
             const res = await fetch(
-                `http://localhost:5000/api/components/${id}`
+                `https://underthehood.onrender.com/api/components/${id}`
             );
 
             if (!res.ok) throw new Error("Component not found");
@@ -50,7 +50,7 @@ export default function ComponentDetails() {
             setSubmitting(true);
 
             const res = await fetch(
-                `http://localhost:5000/api/components/${id}/review`,
+                `https://underthehood.onrender.com/api/components/${id}/review`,
                 {
                     method: "POST",
                     headers: {

@@ -24,7 +24,7 @@ export default function Wishlist() {
 
         try {
             await fetch(
-                `http://localhost:5000/api/wishlist/${type}s/${id}`,
+                `https://underthehood.onrender.com/api/wishlist/${type}s/${id}`,
                 {
                     method: isWishlisted ? "DELETE" : "POST",
                     headers: {
@@ -63,7 +63,7 @@ export default function Wishlist() {
 
         const fetchWishlist = async () => {
             try {
-                const res = await fetch("http://localhost:5000/api/wishlist", {
+                const res = await fetch("https://underthehood.onrender.com/api/wishlist", {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }
@@ -80,14 +80,14 @@ export default function Wishlist() {
                 // Fetch component details
                 const componentData = await Promise.all(
                     wishlistData.components.map(id =>
-                        fetch(`http://localhost:5000/api/components/${id}`).then(r => r.json())
+                        fetch(`https://underthehood.onrender.com/api/components/${id}`).then(r => r.json())
                     )
                 );
 
                 // Fetch computer details
                 const computerData = await Promise.all(
                     wishlistData.computers.map(id =>
-                        fetch(`http://localhost:5000/api/computers/${id}`).then(r => r.json())
+                        fetch(`https://underthehood.onrender.com/api/computers/${id}`).then(r => r.json())
                     )
                 );
 

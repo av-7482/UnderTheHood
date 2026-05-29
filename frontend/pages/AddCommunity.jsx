@@ -27,7 +27,7 @@ export default function NewCommunityPost() {
         };
 
         try {
-            const res = await fetch("http://localhost:5000/api/community/add", {
+            const res = await fetch("https://underthehood.onrender.com/api/community/add", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

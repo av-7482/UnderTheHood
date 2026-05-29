@@ -53,7 +53,7 @@ export default function Home() {
   useEffect(() => {
     const fetchComponents = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/components");
+        const res = await fetch("https://underthehood.onrender.com/api/components");
         const data = await res.json();
         setComponents(data);
       } catch (err) {
@@ -69,7 +69,7 @@ export default function Home() {
   useEffect(() => {
     const fetchComputers = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/computers");
+        const res = await fetch("https://underthehood.onrender.com/api/computers");
         const data = await res.json();
         setComputers(data);
       } catch (err) {

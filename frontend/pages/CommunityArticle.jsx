@@ -12,7 +12,7 @@ const CommunityArticle = () => {
     useEffect(() => {
         const fetchPost = async () => {
             try {
-                const res = await fetch(`http://localhost:5000/api/community/${id}`);
+                const res = await fetch(`https://underthehood.onrender.com/api/community/${id}`);
                 const data = await res.json();
                 setPost(data);
             } catch (err) {

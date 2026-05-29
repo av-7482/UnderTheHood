@@ -12,7 +12,7 @@ const CommunityNews = () => {
     useEffect(() => {
         const fetchPosts = async () => {
             try {
-                const res = await fetch("http://localhost:5000/api/community/access");
+                const res = await fetch("https://underthehood.onrender.com/api/community/access");
                 const data = await res.json();
                 setPosts(data);
                 setFilteredPosts(data);

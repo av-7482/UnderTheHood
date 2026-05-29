@@ -19,7 +19,7 @@ export default function ComputerDetails() {
     /* ================= FETCH COMPUTER ================= */
     const fetchComputer = async () => {
         try {
-            const res = await fetch(`http://localhost:5000/api/computers/${id}`);
+            const res = await fetch(`https://underthehood.onrender.com/api/computers/${id}`);
 
             if (!res.ok) throw new Error("Computer not found");
 
@@ -48,7 +48,7 @@ export default function ComputerDetails() {
             setSubmitting(true);
 
             const res = await fetch(
-                `http://localhost:5000/api/computers/${id}/review`,
+                `https://underthehood.onrender.com/api/computers/${id}/review`,
                 {
                     method: "POST",
                     headers: {

@@ -51,7 +51,7 @@ export default function AddComputer() {
     };
 
     try {
-      const res = await fetch("http://localhost:5000/api/computers", {
+      const res = await fetch("https://underthehood.onrender.com/api/computers", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

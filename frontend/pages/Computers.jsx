@@ -15,7 +15,7 @@ const ComputerShowcase = () => {
 
     /* ================= FETCH COMPUTERS ================= */
     useEffect(() => {
-        fetch("http://localhost:5000/api/computers")
+        fetch("https://underthehood.onrender.com/api/computers")
             .then(res => res.json())
             .then(data => setComputers(data))
             .catch(err => console.error(err));
@@ -27,7 +27,7 @@ const ComputerShowcase = () => {
 
         const fetchWishlist = async () => {
             try {
-                const res = await fetch("http://localhost:5000/api/wishlist", {
+                const res = await fetch("https://underthehood.onrender.com/api/wishlist", {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }
@@ -57,7 +57,7 @@ const ComputerShowcase = () => {
 
         try {
             await fetch(
-                `http://localhost:5000/api/wishlist/computers/${computerId}`,
+                `https://underthehood.onrender.com/api/wishlist/computers/${computerId}`,
                 {
                     method: isWishlisted ? "DELETE" : "POST",
                     headers: {
