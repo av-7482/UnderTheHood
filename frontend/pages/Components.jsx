@@ -117,7 +117,7 @@ const ComponentShowcase = () => {
                 <div
                   className="image"
                   style={{
-                    backgroundImage: `url(../src/assets/${component.image})`
+                    backgroundImage: `url(/images/${component.image})`
                   }}
                 >
                   {/* Wishlist */}

@@ -111,7 +111,7 @@ export default function ComputerDetails() {
                     <div className="left-column">
                         <div className="product-image">
                             <img
-                                src={`../src/assets/${computer.images?.[0]}`}
+                                src={`/images/${computer.images?.[0]}`}
                                 alt={computer.modelName}
                                 onError={(e) => {
                                     e.target.src = "/images/default-pc.png";

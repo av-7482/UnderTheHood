@@ -138,7 +138,7 @@ const ComputerShowcase = () => {
                                 <div
                                     className="image"
                                     style={{
-                                        backgroundImage: `url(../src/assets/${pc.images?.[0] || "default.png"})`
+                                        backgroundImage: `url(/images/${pc.images?.[0] || "default.png"})`
                                     }}
                                 >
                                     <span
