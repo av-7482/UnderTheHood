@@ -233,7 +233,7 @@ export default function Home() {
                   <div className="card-badge">{item.category.toUpperCase()}</div>
                   <div className="card-image">
                     <img
-                      src={`../src/assets/${item.image}`}
+                      src={`/images/${item.image}`}
                       alt={item.name}
                       onError={(e) => {
                         e.target.onerror = null;
@@ -278,7 +278,7 @@ export default function Home() {
                     {/* PC IMAGE */}
                     <div className="build-image">
                       <img
-                        src={`../src/assets/${pc.images?.[0]}`}
+                        src={`/images/${pc.images?.[0]}`}
                         alt={pc.modelName}
                         onError={(e) => {
                           e.target.onerror = null;
