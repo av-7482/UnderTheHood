@@ -36,7 +36,7 @@ const CommunityArticle = () => {
                 <div className="article-container">
                     <img
                         className="article-image"
-                        src={post.image || "/placeholder.jpg"}
+                       src={`/images/${post.image}`}
                         alt={post.title}
                     />
 
