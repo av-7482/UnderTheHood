@@ -1,0 +1,130 @@
+/* ================= PAGE ================= */
+
+.wishlist-page {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: #0e131d;
+    color: white;
+    font-family: "Noto Sans", sans-serif;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 1.6rem;
+    margin: 40px 0 20px;
+    color: #00ff66;
+}
+
+/* ================= GRID ================= */
+
+.grid {
+    max-width: 1400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+/* ================= CARD ================= */
+
+.wishlist-card {
+    background: #151e2b;
+    border-radius: 14px;
+    border: 1px solid #1f2a40;
+    overflow: hidden;
+    transition: transform 0.3s ease, border 0.3s ease;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.wishlist-card:hover {
+    transform: translateY(-6px);
+    border-color: #00ff66;
+}
+
+/* ================= IMAGE ================= */
+
+.image {
+    height: 170px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+/* ================= HEART ================= */
+
+.wishlist {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 20px;
+    color: red;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 6px 9px;
+    border-radius: 100%;
+}
+
+/* ================= INFO ================= */
+
+.info {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.info h3 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.brand {
+    font-size: 13px;
+    color: #92a4c9;
+}
+
+.category {
+    font-size: 12px;
+    opacity: 0.75;
+}
+
+.price {
+    font-weight: bold;
+    margin: 6px 0;
+}
+
+/* ================= BUTTON ================= */
+
+.view-btn {
+    margin-top: auto;
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid #00ff66;
+    color: #00ff66;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.25s ease;
+}
+
+.view-btn:hover {
+    background: #00ff66;
+    color: #000;
+}
+
+/* ================= STATES ================= */
+
+.loading,
+.empty {
+    text-align: center;
+    color: #8fa3c1;
+    margin-top: 40px;
+}

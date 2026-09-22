@@ -1,0 +1,120 @@
+/* ===== Global Reset ===== */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #0e131d;
+  font-family: "Noto Sans", sans-serif;
+}
+
+/* ===== App Layout ===== */
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #0e131d;
+}
+
+/* ===== Page Wrapper ===== */
+.add-computer-page {
+  flex: 1;
+  padding: 40px 20px 60px;
+  color: #ffffff;
+}
+
+/* ===== Page Title ===== */
+.add-computer-page h1 {
+  text-align: center;
+  margin-bottom: 32px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+/* ===== Form ===== */
+.computer-form {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* ===== Cards ===== */
+.card {
+  background: #151e2b;
+  padding: 28px;
+  border-radius: 14px;
+  border: 1px solid #1f2a40;
+}
+
+.card h2 {
+  margin-bottom: 22px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* ===== Form Group ===== */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #92a4c9;
+}
+
+/* ===== Inputs ===== */
+.form-group input,
+.form-group textarea {
+  padding: 12px 14px;
+  background: #0e131d;
+  border: 1px solid #1f2a40;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.form-group textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #6f82a8;
+}
+
+/* ===== Image Name ===== */
+.image-name {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #00ff00;
+}
+
+/* ===== Buttons ===== */
+button {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  background: #00ff00;
+  color: #0e131d;
+}
+
+button:hover {
+  background: #00e600;
+}
+
+/* ===== Submit Button ===== */
+.submit-btn {
+  align-self: center;
+  padding: 12px 26px;
+  font-size: 16px;
+}
