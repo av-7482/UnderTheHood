@@ -89,7 +89,7 @@ export default function UpdateItem() {
         if (!data) return;
 
         // Remove fields backend doesn't need
-        const { _id, createdAt, __v, ...payload } = data;
+        const { _id, __v, ...payload } = data;
 
         try {
             const res = await fetch(

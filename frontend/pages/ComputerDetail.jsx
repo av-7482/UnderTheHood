@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -17,7 +17,7 @@ export default function ComputerDetails() {
     const user = JSON.parse(localStorage.getItem("user"));
 
     /* ================= FETCH COMPUTER ================= */
-    const fetchComputer = async () => {
+    const fetchComputer = useCallback(async () => {
         try {
             const res = await fetch(`https://underthehood.onrender.com/api/computers/${id}`);
 
@@ -31,11 +31,11 @@ export default function ComputerDetails() {
         } finally {
             setLoading(false);
         }
-    };
+    }, [id]);
 
     useEffect(() => {
         fetchComputer();
-    }, [id]);
+    }, [fetchComputer]);
 
     /* ================= ADD REVIEW ================= */
     const submitReview = async () => {

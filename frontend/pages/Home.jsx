@@ -4,6 +4,16 @@ import "../CSS/home.css";
 import Header from "../components/Header.jsx";
 import Footer from "../components/Footer.jsx";
 
+/* ================= QUOTES ================= */
+const techQuotes = [
+  "The computer was born to solve problems that did not exist before.",
+  "Technology is best when it brings people together.",
+  "The advance of technology is based on making it fit in so that you don't really even notice it.",
+  "Any sufficiently advanced technology is indistinguishable from magic.",
+  "First, solve the problem. Then, write the code.",
+  "The function of good software is to make the complex appear to be simple."
+];
+
 export default function Home() {
   const navigate = useNavigate();
 
@@ -13,15 +23,6 @@ export default function Home() {
   const [computers, setComputers] = useState([]);
 
 
-  /* ================= QUOTES ================= */
-  const techQuotes = [
-    "The computer was born to solve problems that did not exist before.",
-    "Technology is best when it brings people together.",
-    "The advance of technology is based on making it fit in so that you don't really even notice it.",
-    "Any sufficiently advanced technology is indistinguishable from magic.",
-    "First, solve the problem. Then, write the code.",
-    "The function of good software is to make the complex appear to be simple."
-  ];
 
   /* ================= ROTATE QUOTES ================= */
   useEffect(() => {
@@ -297,7 +298,7 @@ export default function Home() {
 
 
                     <p className="price">
-                       ₹{pc.price?.toLocaleString()}
+                      ₹{pc.price?.toLocaleString()}
                     </p>
 
                     <button

@@ -18,7 +18,7 @@ export default function AddComponent() {
 
   const navigate = useNavigate();
   const token = localStorage.getItem("token");
-  const user = JSON.parse(localStorage.getItem("user")); // role check
+  //const user = JSON.parse(localStorage.getItem("user")); // role check
   /* IMAGE → filename only */
   const handleImageChange = (e) => {
     if (e.target.files[0]) {

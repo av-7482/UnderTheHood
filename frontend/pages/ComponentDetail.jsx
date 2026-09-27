@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -17,7 +17,7 @@ export default function ComponentDetails() {
     const user = JSON.parse(localStorage.getItem("user"));
 
     /* ================= FETCH COMPONENT ================= */
-    const fetchComponent = async () => {
+    const fetchComponent = useCallback(async () => {
         try {
             const res = await fetch(
                 `https://underthehood.onrender.com/api/components/${id}`
@@ -33,11 +33,11 @@ export default function ComponentDetails() {
         } finally {
             setLoading(false);
         }
-    };
+    }, [id]);
 
     useEffect(() => {
         fetchComponent();
-    }, [id]);
+    }, [fetchComponent]);
 
     /* ================= ADD REVIEW ================= */
     const submitReview = async () => {

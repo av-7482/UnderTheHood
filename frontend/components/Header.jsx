@@ -5,8 +5,10 @@ import { Link, useNavigate } from "react-router-dom";
 
 function Header() {
   const navigate = useNavigate();
-  const [user, setUser] = useState(null);
-  const [profileOpen, setProfileOpen] = useState(false);
+  const [user, setUser] = useState(() => {
+    const storedUser = localStorage.getItem("user");
+    return storedUser ? JSON.parse(storedUser) : null;
+  }); const [profileOpen, setProfileOpen] = useState(false);
   const dropdownRef = useRef();
   const [adminOpen, setAdminOpen] = useState(false);
 
@@ -35,13 +37,13 @@ function Header() {
     requestAnimationFrame(animateScroll);
   };
 
-  // Load user from localStorage
-  useEffect(() => {
-    const storedUser = localStorage.getItem("user");
-    if (storedUser) {
-      setUser(JSON.parse(storedUser));
-    }
-  }, []);
+  // // Load user from localStorage
+  // useEffect(() => {
+  //   const storedUser = localStorage.getItem("user");
+  //   if (storedUser) {
+  //     setUser(JSON.parse(storedUser));
+  //   }
+  // }, []);
 
   // Close profile dropdown on outside click
   useEffect(() => {

@@ -6,16 +6,19 @@ import Footer from "../components/Footer.jsx";
 const CommunityNews = () => {
     const [posts, setPosts] = useState([]);
     const [search, setSearch] = useState("");
-    const [filteredPosts, setFilteredPosts] = useState([]);
-
+    const filteredPosts = posts.filter(post =>
+        post.title.toLowerCase().includes(search.toLowerCase()) ||
+        post.body.toLowerCase().includes(search.toLowerCase())
+    );
     // Fetch news from backend
     useEffect(() => {
         const fetchPosts = async () => {
             try {
-                const res = await fetch("https://underthehood.onrender.com/api/community/access");
+                const res = await fetch(
+                    "https://underthehood.onrender.com/api/community/access"
+                );
                 const data = await res.json();
                 setPosts(data);
-                setFilteredPosts(data);
             } catch (err) {
                 console.error("Failed to fetch community posts", err);
             }
@@ -25,13 +28,13 @@ const CommunityNews = () => {
     }, []);
 
     // Search functionality
-    useEffect(() => {
-        const result = posts.filter(post =>
-            post.title.toLowerCase().includes(search.toLowerCase()) ||
-            post.body.toLowerCase().includes(search.toLowerCase())
-        );
-        setFilteredPosts(result);
-    }, [search, posts]);
+    // useEffect(() => {
+    //     const result = posts.filter(post =>
+    //         post.title.toLowerCase().includes(search.toLowerCase()) ||
+    //         post.body.toLowerCase().includes(search.toLowerCase())
+    //     );
+    //     setFilteredPosts(result);
+    // }, [search, posts]);
 
     return (
         <>
@@ -63,7 +66,7 @@ const CommunityNews = () => {
                                 <div className="news-card" key={post._id} onClick={() => window.location.href = `/community/${post._id}`} >
                                     <div className="image-wrapper">
                                         <img
-                                           src={`/images/${post.image}`}
+                                            src={`/images/${post.image}`}
                                             alt={post.title}
                                         />
                                     </div>
