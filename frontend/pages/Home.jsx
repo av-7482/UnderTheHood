@@ -175,7 +175,7 @@ export default function Home() {
         {/* ================= FEATURES SECTION ================= */}
         <section className="features-section">
           <div className="section-header">
-            <h2>Why Choose <span className="highlight">UnderTheHood</span></h2>
+            <h2>Why Choose <span className="highlight">us</span></h2>
           </div>
 
           <div className="features-grid">
